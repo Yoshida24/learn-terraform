@@ -36,6 +36,8 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+**/plan.out
+
 NOTE.md
 MEMO.md
 

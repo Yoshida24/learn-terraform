@@ -1,14 +1,11 @@
-.PHONY: run
-run:
-	@echo "Running..."
-	bash scripts/run.sh
+.PHONY: init
+init:
+	(cd cloudfunction_public_http_2nd_gen/environments/production && terraform init)
 
-.PHONY: serve
-serve:
-	@echo "Serving..."
-	sh scripts/serve.sh
+.PHONY: plan
+plan:
+	sh scripts/plan.sh
 
-.PHONY: test
-test:
-	@echo "Testing..."
-	bash scripts/test.sh
+.PHONY: deploy
+deploy:
+	sh scripts/deploy.sh
