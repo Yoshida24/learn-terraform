@@ -6,6 +6,10 @@ init:
 push:
 	sh scripts/push_example_container.sh
 
+.PHONY: local
+local:
+	sh scripts/local.sh
+
 .PHONY: plan
 plan:
 	(cd environments/develop && terraform plan -var-file="develop.tfvars" -out=plan.out)
